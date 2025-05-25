@@ -1,24 +1,211 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Práctica con CRUD">
-    <meta name="author" content="Ignacio Nazar">
-    <title>Collección de juegos</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Práctica con CRUD" />
+    <meta name="author" content="Ignacio Nazar" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Colección de juegos</title>
+  </head>
+  <body>
     <header>
-        <nav>
-
-        </nav>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html">Colección de juegos</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="./pages/error404.html"
+                  >Nosotros</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
-    <main>
-
+    <main class="container my-4">
+      <div class="d-flex justify-content-between">
+        <h1>Lista de juegos</h1>
+        <button class="btn btn-primary" id="btnAgregar">Agregar</button>
+      </div>
+      <section class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Saga/Estudio</th>
+              <th scope="col">Género</th>
+              <th scope="col">Email</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- GTA V -->
+            <tr>
+              <th scope="row">1</th>
+              <td>Grand Theft Auto</td>
+              <td>V</td>
+              <td>Open World</td>
+              <td>gta@rockstargames.com</td>
+              <td>
+                <button class="btn btn-warning">Editar</button>
+                <button class="btn btn-danger">Borrar</button>
+                <button class="btn btn-info">Ver</button>
+              </td>
+            </tr>
+            <!-- Fortnite -->
+            <tr>
+              <th scope="row">2</th>
+              <td>Fortnite</td>
+              <td>Epic Games</td>
+              <td>Battle Royale</td>
+              <td>contact@epicgames.com</td>
+              <td>
+                <button class="btn btn-warning">Editar</button>
+                <button class="btn btn-danger">Borrar</button>
+                <button class="btn btn-info">Ver</button>
+              </td>
+            </tr>
+            <!-- FC 24 -->
+            <tr>
+              <th scope="row">3</th>
+              <td>FC</td>
+              <td>24</td>
+              <td>Football</td>
+              <td>fc@ea.com</td>
+              <td>
+                <button class="btn btn-warning">Editar</button>
+                <button class="btn btn-danger">Borrar</button>
+                <button class="btn btn-info">Ver</button>
+              </td>
+            </tr>
+            <!-- The Legend of Zelda: Breath of the Wild -->
+            <tr>
+              <th scope="row">4</th>
+              <td>The Legend of Zelda</td>
+              <td>Breath of the Wild</td>
+              <td>Action-Adventure</td>
+              <td>zelda@nintendo.com</td>
+              <td>
+                <button class="btn btn-warning">Editar</button>
+                <button class="btn btn-danger">Borrar</button>
+                <button class="btn btn-info">Ver</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </main>
-    <footer>
-
+    <!-- Modal contacto-->
+    <div
+      class="modal fade"
+      id="modalContacto"
+      tabindex="-1"
+      aria-labelledby="modalContactoLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalContactoLabel">
+              Administrar Juego
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombre"
+                  minlength="2"
+                  maxlength="50"
+                  placeholder="Ej: FIFA"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="apellido" class="form-label">Saga/Estudio</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="apellido"
+                  minlength="2"
+                  maxlength="50"
+                  placeholder="Ej: 24"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Ej: fifa@ea.com"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="telefono" class="form-label">Género</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="telefono"
+                  placeholder="Ej: Football"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="imagen" class="form-label">Imagen</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="imagen"
+                  placeholder="Ej: http://image"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="notas" class="form-label">Notas</label>
+                <textarea
+                  class="form-control"
+                  id="notas"
+                  placeholder="Agrega tus notas aqui"
+                  maxlength="250"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-dark text-light text-center py-3">
+      <p>&copy; Todos los derechos reservados</p>
     </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/app.js" type="module"></script>
-</body>
+  </body>
 </html>
