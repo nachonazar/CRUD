@@ -46,66 +46,41 @@
         <table class="table">
           <thead>
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Saga/Estudio</th>
-              <th scope="col">Género</th>
-              <th scope="col">Email</th>
-              <th scope="col">Acciones</th>
+              <th>#</th>
+              <th>Nombre</th>
+              <th>Plataforma</th>
+              <th>Género</th>
+              <th>Desarrollador</th>
             </tr>
           </thead>
           <tbody>
-            <!-- GTA V -->
             <tr>
-              <th scope="row">1</th>
-              <td>Grand Theft Auto</td>
-              <td>V</td>
+              <td>1</td>
+              <td>Grand Theft Auto V</td>
+              <td>PC, PS5, Xbox</td>
               <td>Mundo abierto</td>
-              <td>gta@rockstargames.com</td>
-              <td>
-                <button class="btn btn-warning">Editar</button>
-                <button class="btn btn-danger">Borrar</button>
-                <button class="btn btn-info">Ver</button>
-              </td>
+              <td>Rockstar Games</td>
             </tr>
-            <!-- Fortnite -->
             <tr>
-              <th scope="row">2</th>
+              <td>2</td>
               <td>Fortnite</td>
-              <td>Epic Games</td>
+              <td>PC, PS5, Xbox</td>
               <td>Battle Royale</td>
-              <td>contact@epicgames.com</td>
-              <td>
-                <button class="btn btn-warning">Editar</button>
-                <button class="btn btn-danger">Borrar</button>
-                <button class="btn btn-info">Ver</button>
-              </td>
+              <td>Epic Games</td>
             </tr>
-            <!-- FC 24 -->
             <tr>
-              <th scope="row">3</th>
-              <td>FC</td>
-              <td>24</td>
-              <td>Futbol</td>
-              <td>fc@ea.com</td>
-              <td>
-                <button class="btn btn-warning">Editar</button>
-                <button class="btn btn-danger">Borrar</button>
-                <button class="btn btn-info">Ver</button>
-              </td>
+              <td>3</td>
+              <td>EA Sports FC 24</td>
+              <td>PC, PS5, Xbox</td>
+              <td>Fútbol</td>
+              <td>EA Sports</td>
             </tr>
-            <!-- The Legend of Zelda: Breath of the Wild -->
             <tr>
-              <th scope="row">4</th>
-              <td>The Legend of Zelda</td>
-              <td>Breath of the Wild</td>
+              <td>4</td>
+              <td>The Legend of Zelda: Breath of the Wild</td>
+              <td>Nintendo Switch</td>
               <td>Acción-aventura</td>
-              <td>zelda@nintendo.com</td>
-              <td>
-                <button class="btn btn-warning">Editar</button>
-                <button class="btn btn-danger">Borrar</button>
-                <button class="btn btn-info">Ver</button>
-              </td>
+              <td>Nintendo</td>
             </tr>
           </tbody>
         </table>
@@ -142,36 +117,38 @@
                   id="nombre"
                   minlength="2"
                   maxlength="50"
-                  placeholder="Ej: FC"
+                  placeholder="Ej: FC 24"
                 />
               </div>
               <div class="mb-3">
-                <label for="apellido" class="form-label">Saga/Estudio</label>
+                <label for="género" class="form-label">Género</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="apellido"
+                  id="género"
+                  placeholder="Ej: Futbol, Acción-aventura"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="plataforma" class="form-label">Plataforma</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="plataforma"
+                  placeholder="Ej: PC, PS5, Xbox"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="desarrollador" class="form-label"
+                  >Desarrollador</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="desarrollador"
                   minlength="2"
                   maxlength="50"
-                  placeholder="Ej: 24"
-                />
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  placeholder="Ej: fc@ea.com"
-                />
-              </div>
-              <div class="mb-3">
-                <label for="telefono" class="form-label">Género</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="telefono"
-                  placeholder="Ej: Futbol"
+                  placeholder="Ej: EA Sports"
                 />
               </div>
               <div class="mb-3">
@@ -184,11 +161,11 @@
                 />
               </div>
               <div class="mb-3">
-                <label for="notas" class="form-label">Notas</label>
+                <label for="descripción" class="form-label">Descripción</label>
                 <textarea
                   class="form-control"
-                  id="notas"
-                  placeholder="Agrega tus notas aqui"
+                  id="descripción"
+                  placeholder="Agrega la descripción del juego aquí"
                   maxlength="250"
                 ></textarea>
               </div>
